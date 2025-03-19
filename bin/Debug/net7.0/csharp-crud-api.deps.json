@@ -11,7 +11,17 @@
           "Microsoft.AspNetCore.OpenApi": "7.0.3",
           "Microsoft.EntityFrameworkCore.Design": "7.0.5",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.3",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "Neurotec.Biometrics.Client": "13.1.0.0",
+          "Neurotec.Biometrics": "13.1.0.0",
+          "Neurotec.Biometrics.Gui": "13.1.0.0",
+          "Neurotec.Devices": "13.1.0.0",
+          "Neurotec": "13.1.0.0",
+          "Neurotec.Licensing": "13.1.0.0",
+          "Neurotec.Media": "13.1.0.0",
+          "Neurotec.Media.Processing": "13.1.0.0",
+          "Newtonsoft.Json": "13.0.0.0",
+          "System.Data.SQLite": "1.0.66.0"
         },
         "runtime": {
           "csharp-crud-api.dll": {}
@@ -235,6 +245,94 @@
         "dependencies": {
           "System.Text.Encodings.Web": "7.0.0"
         }
+      },
+      "Neurotec.Biometrics.Client/13.1.0.0": {
+        "runtime": {
+          "Neurotec.Biometrics.Client.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
+      },
+      "Neurotec.Biometrics/13.1.0.0": {
+        "runtime": {
+          "Neurotec.Biometrics.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
+      },
+      "Neurotec.Biometrics.Gui/13.1.0.0": {
+        "runtime": {
+          "Neurotec.Biometrics.Gui.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
+      },
+      "Neurotec.Devices/13.1.0.0": {
+        "runtime": {
+          "Neurotec.Devices.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
+      },
+      "Neurotec/13.1.0.0": {
+        "runtime": {
+          "Neurotec.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
+      },
+      "Neurotec.Licensing/13.1.0.0": {
+        "runtime": {
+          "Neurotec.Licensing.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
+      },
+      "Neurotec.Media/13.1.0.0": {
+        "runtime": {
+          "Neurotec.Media.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
+      },
+      "Neurotec.Media.Processing/13.1.0.0": {
+        "runtime": {
+          "Neurotec.Media.Processing.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
+        }
+      },
+      "System.Data.SQLite/1.0.66.0": {
+        "runtime": {
+          "System.Data.SQLite.dll": {
+            "assemblyVersion": "1.0.66.0",
+            "fileVersion": "1.0.66.0"
+          }
+        }
+      },
+      "Neurotec.Gui/13.1.0.0": {
+        "runtime": {
+          "Neurotec.Gui.dll": {
+            "assemblyVersion": "13.1.0.0",
+            "fileVersion": "13.1.0.0"
+          }
+        }
       }
     }
   },
@@ -446,6 +544,61 @@
       "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
+    },
+    "Neurotec.Biometrics.Client/13.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Neurotec.Biometrics/13.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Neurotec.Biometrics.Gui/13.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Neurotec.Devices/13.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Neurotec/13.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Neurotec.Licensing/13.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Neurotec.Media/13.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Neurotec.Media.Processing/13.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Data.SQLite/1.0.66.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Neurotec.Gui/13.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

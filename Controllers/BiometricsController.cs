@@ -31,41 +31,50 @@ public class BiometricsController : ControllerBase
         .ToArray();
     }
 
-    // ✅ InitLicense endpoint that tries to obtain the Neurotec licenses
     [HttpGet("InitLicense")]
     public IActionResult InitLicense()
     {
-        const string Address = "192.168.1.61";
-        const string Port = "5000";
+        const string Address = "/local"; // License server IP
+        const string Port = "5000";           // License server Port
         const string Components = "Biometrics.FingerExtraction,Biometrics.FingerSegmentation";
         const string OptionalComponents = "Biometrics.FingerQualityAssessmentBase";
 
         try
         {
-            // Optional: Handle trial mode if needed (assuming Utilities.GetTrialModeFlag() exists)
-            // NLicenseManager.TrialMode = Utilities.GetTrialModeFlag();
-            // NLicenseManager.TrialMode = true
-            // Obtain required components
-            if (!NLicense.ObtainComponents(Address, Port, Components))
+            // Attempt to obtain the required components
+            foreach (var component in Components.Split(','))
             {
-                return BadRequest(new
+                if (!NLicense.ObtainComponents(Address, Port, component))
                 {
-                    status = "failed",
-                    message = $"Could not obtain licenses for components: {Components}"
-                });
+                    // If any component fails, return an error message
+                    return StatusCode(500, new
+                    {
+                        status = "failed",
+                        message = $"Could not obtain license for component: {component}"
+                    });
+                }
             }
 
-            // Optionally obtain additional components
-            NLicense.ObtainComponents(Address, Port, OptionalComponents);
+            // Attempt to obtain optional components
+            foreach (var optionalComponent in OptionalComponents.Split(','))
+            {
+                if (!NLicense.ObtainComponents(Address, Port, optionalComponent))
+                {
+                    // Log or handle optional components failure (this won't stop success)
+                    Console.WriteLine($"Optional component '{optionalComponent}' not obtained.");
+                }
+            }
 
+            // If all components are successfully obtained
             return Ok(new
             {
                 status = "success",
-                message = "License initialized successfully."
+                message = "Licenses initialized successfully."
             });
         }
         catch (IOException ioEx)
         {
+            // Specific catch for I/O exceptions (e.g., licensing service not running)
             return StatusCode(500, new
             {
                 status = "error",
@@ -74,6 +83,7 @@ public class BiometricsController : ControllerBase
         }
         catch (Exception ex)
         {
+            // Catch all other exceptions
             return StatusCode(500, new
             {
                 status = "error",

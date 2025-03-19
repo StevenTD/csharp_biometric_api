@@ -1,5 +1,6 @@
 using Data;
 using Microsoft.EntityFrameworkCore;
+using Neurotec.Licensing;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,5 +31,10 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+
+NLicenseManager.TrialMode = true;
+
+Console.WriteLine("Trial mode: " + NLicenseManager.TrialMode);
 
 app.Run();

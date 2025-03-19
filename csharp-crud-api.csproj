@@ -17,19 +17,50 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
-  <!-- Add this section to reference your Neurotec.Licensing.dll -->
   <ItemGroup>
+    <Reference Include="Neurotec">
+      <HintPath>..\..\..\OneDrive - Tambuli Labs Co Ltd\Documents\CS\Lib\Neurotec.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics">
+      <HintPath>..\..\..\OneDrive - Tambuli Labs Co Ltd\Documents\CS\Lib\Neurotec.Biometrics.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Client">
+      <HintPath>E:\Neurotec_Biometric_2025_1_SDK_2025-03-04\Neurotec_Biometric_2025_1_SDK\Bin\dotNET\Neurotec.Biometrics.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Gui">
+      <HintPath>..\..\..\OneDrive - Tambuli Labs Co Ltd\Documents\CS\Lib\Neurotec.Biometrics.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Devices">
+      <HintPath>..\..\..\OneDrive - Tambuli Labs Co Ltd\Documents\CS\Lib\Neurotec.Devices.dll</HintPath>
+    </Reference>
     <Reference Include="Neurotec.Licensing">
-      <HintPath>lib\Neurotec.Licensing.dll</HintPath>
-      <Private>True</Private> <!-- Ensures DLL is copied to build output -->
+      <HintPath>..\..\..\OneDrive - Tambuli Labs Co Ltd\Documents\CS\Lib\Neurotec.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Media">
+      <HintPath>..\..\..\OneDrive - Tambuli Labs Co Ltd\Documents\CS\Lib\Neurotec.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Media.Processing">
+      <HintPath>..\..\..\OneDrive - Tambuli Labs Co Ltd\Documents\CS\Lib\Neurotec.Media.Processing.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\OneDrive - Tambuli Labs Co Ltd\Documents\CS\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\OneDrive - Tambuli Labs Co Ltd\Documents\CS\Lib\System.Data.SQLite.dll</HintPath>
     </Reference>
   </ItemGroup>
 
-    <ItemGroup>
-    <Reference Include="Neurotec">
-      <HintPath>lib\Neurotec.dll</HintPath>
-      <Private>True</Private> <!-- Ensures DLL is copied to build output -->
-    </Reference>
+  <ItemGroup>
+    <None Update="lib\NLicensing.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NCore.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NLicensing.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
+
 
 </Project>
