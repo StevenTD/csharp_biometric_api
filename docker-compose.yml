@@ -6,12 +6,12 @@ services:
     image: francescoxx/csharpapp:1.0
     build: .
     ports:
-      - "8080:80"
+      - "0.0.0.0:8080:80"
     environment:
       ConnectionStrings__DefaultConnection: "Host=db;Database=postgres;Username=postgres;Password=postgres"
     depends_on:
       - db
-  
+
   db:
     container_name: db
     image: postgres:12

@@ -29,4 +29,11 @@ public class WeatherForecastController : ControllerBase
         })
         .ToArray();
     }
+
+    // ✅ InitLicense endpoint returning JSON success
+    [HttpGet("InitLicense")]
+    public IActionResult InitLicense()
+    {
+        return Ok(new { status = "success", message = "License initialized successfully." });
+    }
 }

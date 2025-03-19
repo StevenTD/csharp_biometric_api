@@ -17,4 +17,19 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <!-- Add this section to reference your Neurotec.Licensing.dll -->
+  <ItemGroup>
+    <Reference Include="Neurotec.Licensing">
+      <HintPath>lib\Neurotec.Licensing.dll</HintPath>
+      <Private>True</Private> <!-- Ensures DLL is copied to build output -->
+    </Reference>
+  </ItemGroup>
+
+    <ItemGroup>
+    <Reference Include="Neurotec">
+      <HintPath>lib\Neurotec.dll</HintPath>
+      <Private>True</Private> <!-- Ensures DLL is copied to build output -->
+    </Reference>
+  </ItemGroup>
+
 </Project>
